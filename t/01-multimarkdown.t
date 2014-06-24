@@ -32,8 +32,8 @@ is($html1, $html1e);
 ##############################################################################
 
 $tt->process(\<<EOF, {}, \my $html2) or die $tt->error;
-[% USE MultiMarkdown -%]
-[% FILTER multimarkdown(heading_ids = 0, implementation => 'PP') -%]
+[% USE MultiMarkdown(implementation = 'PP') -%]
+[% FILTER multimarkdown(heading_ids = 0) -%]
 #Foo
 
 Bar

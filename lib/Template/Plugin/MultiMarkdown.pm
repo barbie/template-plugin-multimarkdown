@@ -18,8 +18,7 @@ BEGIN {
     }
 }
     
-
-our $VERSION = 0.04;
+our $VERSION = 0.06;
 
 sub init {
     my $self = shift;
@@ -31,20 +30,19 @@ sub init {
 sub filter {
     my ($self, $text, $args, $config) = @_;
 
-    $config ||= {};
-
-    my $req_class = delete $config->{implementation} || '';
+    my $options   = { %{$self->{_CONFIG}}, %{$config || {}} };
+    my $req_class = delete $options->{implementation} || '';
 
     if ($req_class eq 'PP') {
 	require Text::MultiMarkdown;
-	return Text::MultiMarkdown->new(%$config)->markdown($text);
+	return Text::MultiMarkdown->new(%$options)->markdown($text);
     }
     elsif ($req_class eq 'XS') {
 	require Text::MultiMarkdown::XS;
-	return Text::MultiMarkdown::XS->new($config)->markdown($text);
+	return Text::MultiMarkdown::XS->new($options)->markdown($text);
     }
     else {
-	return $text_mmd_class->new(%$config)->markdown($text);
+	return $text_mmd_class->new(%$options)->markdown($text);
     }
 }
 
@@ -67,7 +65,7 @@ Template::Plugin::MultiMarkdown - TT plugin for Text::MultiMarkdown
   **Bold** foo bar baz
   [%- END %]
 
-  [% USE MultiMarkdown -%]
+  [% USE MultiMarkdown(implementation => 'XS') -%]
   [% FILTER multimarkdown( document_format => 'complete' ) %]
   ...
   [% END %]
@@ -79,7 +77,7 @@ C<Template::Plugin::MultiMarkdown> wraps C<Text::MultiMarkdown::XS> and
 C<Text::MultiMarkdown> into a Template Toolkit plugin, and will filter your MultiMarkdown
 text into HTML.  By default the plugin will select the XS implementation over the pure
 perl version, but the implementation can be chosen explictly by specifying a parameter
-C<implementation> to the C<multimarkdown> filter.
+C<implementation> to the USE or FILTER statements.
 
 NOTE: C<Text::MultiMarkdown::XS> is a new module and the interface to that module is still
 liable to change.

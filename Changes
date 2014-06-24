@@ -1,5 +1,11 @@
 Revision history for Perl extension Template::Plugin::MultiMarkdown.
 
+0.06  2013-06-22
+        - Added dependency on parent
+
+0.04  2013-06-21
+        - Added code to use Text::MultiMarkdown:XS if it is available
+
 0.03  Tue Mar 03  20:29:30 2009
         - added dependency on Template
 
