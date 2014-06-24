@@ -1,43 +1,46 @@
 {
-   "abstract" : "TT plugin for Text::MultiMarkdown",
-   "author" : [
-      "Andrew Ford <andrew@ford-mason.co.uk>"
-   ],
-   "dynamic_config" : 1,
-   "generated_by" : "ExtUtils::MakeMaker version 6.6302, CPAN::Meta::Converter version 2.120921",
-   "license" : [
-      "unknown"
-   ],
-   "meta-spec" : {
-      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
-      "version" : "2"
-   },
-   "name" : "Template-Plugin-MultiMarkdown",
-   "no_index" : {
-      "directory" : [
-         "t",
-         "inc"
-      ]
-   },
-   "prereqs" : {
-      "build" : {
-         "requires" : {
-            "ExtUtils::MakeMaker" : "0"
-         }
-      },
-      "configure" : {
-         "requires" : {
-            "ExtUtils::MakeMaker" : "0"
-         }
-      },
-      "runtime" : {
-         "requires" : {
-            "Template" : "2.16",
-            "Text::MultiMarkdown" : "v1.0.1",
-            "parent" : "0"
-         }
-      }
-   },
-   "release_status" : "stable",
-   "version" : "0.06"
+    "name" : "Template-Plugin-MultiMarkdown",
+    "abstract" : "TT plugin for Text::MultiMarkdown",
+    "version" : "0.06",
+    "author" : [
+        "Barbie (BARBIE) <barbie@cpan.org>"
+    ],
+
+    "release_status" : "stable",
+    "dynamic_config" : 1,
+    "generated_by": "Hand 1.0",
+    "license": "artistic_2",
+
+    "meta-spec" : {
+        "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+        "version" : "2"
+    },
+    "no_index" : {
+        "directory" : [
+            "t",
+            "inc"
+        ]
+    },
+
+    "prereqs" : {
+        "build" : {
+            "requires" : {
+                "ExtUtils::MakeMaker" : "0"
+            }
+        },
+        "configure" : {
+            "requires" : {
+                "ExtUtils::MakeMaker" : "0"
+            }
+        },
+        "runtime" : {
+            "requires" : {
+                "perl": "5.006",
+                "parent" : "0",
+                "Template" : "2.16",
+                "Template::Plugin::Filter" : "2.16",
+                "Text::MultiMarkdown" : "v1.0.1"
+            }
+        }
+    }
 }
