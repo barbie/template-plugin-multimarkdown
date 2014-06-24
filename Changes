@@ -1,5 +1,8 @@
 Revision history for Perl extension Template::Plugin::MultiMarkdown.
 
+0.02  Mon Mar 03  20:46:03 2009
+        - added proper "kwalitee" tests and generally tidied up distribution
+
 0.01  Mon Mar 24  17:06:40 2008
 	- original version - based on Template::Plugin::Markdown
 

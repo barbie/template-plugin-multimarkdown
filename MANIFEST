@@ -2,7 +2,12 @@ Changes
 Makefile.PL
 MANIFEST
 README
-t/00_compile.t
-t/01_markdown.t
-lib/Template/Plugin/Markdown.pm
+t/00-basic.t
+t/01-multimarkdown.t
+t/90-pod.t
+t/91-pod-coverage.t
+t/92-perlcritic.t
+t/93-kwalitee.t
+t/94-distribution.t
+lib/Template/Plugin/MultiMarkdown.pm
 META.yml                                 Module meta-data (added by MakeMaker)

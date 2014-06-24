@@ -1,9 +1,9 @@
 NAME
-    Template::Plugin::Markdown - TT plugin for Text::Markdown
+    Template::Plugin::MultiMarkdown - TT plugin for Text::MultiMarkdown
 
 SYNOPSIS
-      [% USE Markdown -%]
-      [% FILTER markdown %]
+      [% USE MultiMarkdown -%]
+      [% FILTER multimarkdown %]
       #Foo
       Bar
       ---
@@ -12,14 +12,23 @@ SYNOPSIS
       [%- END %]
 
 DESCRIPTION
-    Template::Plugin::Markdown is a plugin for TT, which format your text
-    with Markdown Style.
+    Template::Plugin::MultiMarkdown is a plugin for TT, which will format
+    your text with MultiMarkdown Style.
+
+METHODS AND SUBROUTINES
+    There are two methods required by the TT plugin API:
+
+    "init()"
+    "filter()"
 
 SEE ALSO
-    Template, Text::Markdown
+    Template, Text::MultiMarkdown,
+    <http://fletcherpenney.net/multimarkdown/>
 
 AUTHOR
-    Naoya Ito <naoya@bloghackers.net>
+    Andrew Ford <A.Ford@ford-mason.co.uk> (based on the
+    Template::Plugin::Markdown TT plugin by Naoya Ito
+    <naoya@bloghackers.net>).
 
     This library is free software; you can redistribute it and/or modify it
     under the same terms as Perl itself.
