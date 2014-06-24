@@ -4,13 +4,13 @@ use strict;
 use base qw (Template::Plugin::Filter);
 use Text::MultiMarkdown;
 
-our $VERSION = 0.02;
+our $VERSION = 0.03;
 
 sub init {
     my $self = shift;
     $self->{_DYNAMIC} = 1;
     $self->install_filter($self->{_ARGS}->[0] || 'multimarkdown');
-    $self;
+    return $self;
 }
 
 sub filter {
@@ -43,7 +43,7 @@ Template::Plugin::MultiMarkdown - TT plugin for Text::MultiMarkdown
 Template::Plugin::MultiMarkdown is a plugin for TT, which will format
 your text with MultiMarkdown Style.
 
-=head1 METHODS AND SUBROUTINES
+=head1 SUBROUTINES/METHODS
 
 There are two methods required by the TT plugin API:
 
@@ -55,6 +55,10 @@ There are two methods required by the TT plugin API:
 
 =back
 
+=head1 VERSION
+
+This man page describes version 0.03.
+
 =head1 SEE ALSO
 
 L<Template>, L<Text::MultiMarkdown>, L<http://fletcherpenney.net/multimarkdown/>
@@ -64,6 +68,10 @@ L<Template>, L<Text::MultiMarkdown>, L<http://fletcherpenney.net/multimarkdown/>
 Andrew Ford E<lt>A.Ford@ford-mason.co.ukE<gt> (based on the
 L<Template::Plugin::Markdown> TT plugin by Naoya Ito
 E<lt>naoya@bloghackers.netE<gt>).
+
+=head1 LICENSE AND COPYRIGHT
+
+Copyright (C) 2009 Andrew Ford
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.

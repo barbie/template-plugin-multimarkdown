@@ -2,6 +2,7 @@ Changes
 Makefile.PL
 MANIFEST
 README
+TODO
 t/00-basic.t
 t/01-multimarkdown.t
 t/90-pod.t

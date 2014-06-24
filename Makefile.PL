@@ -3,6 +3,7 @@ WriteMakefile(
     NAME              => 'Template::Plugin::MultiMarkdown',
     VERSION_FROM      => 'lib/Template/Plugin/MultiMarkdown.pm',
     PREREQ_PM         => {
+        Template            => 2.16,
 	Text::MultiMarkdown => '1.0.1',
         Text::Markdown      => 0,
     },

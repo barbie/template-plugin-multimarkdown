@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               Template-Plugin-MultiMarkdown
-version:            0.02
+version:            0.03
 abstract:           TT plugin for Text::MultiMarkdown
 author:
     - Andrew Ford <A.Ford@ford-mason.co.uk>
@@ -9,6 +9,7 @@ distribution_type:  module
 configure_requires:
     ExtUtils::MakeMaker:  0
 requires:
+    Template:             2.16
     Text::Markdown:       0
     Text::MultiMarkdown:  1.0.1
 no_index:
