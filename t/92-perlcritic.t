@@ -1,5 +1,4 @@
-#!/usr/bin/perl
-# $Id: 92-perlcritic.t 4103 2009-03-02 20:41:50Z andrew $
+#!/usr/bin/env perl
 
 use strict;
 use warnings;

@@ -1,10 +1,25 @@
-#$Id: MultiMarkdown.pm 4103 2009-03-02 20:41:50Z andrew $
 package Template::Plugin::MultiMarkdown;
-use strict;
-use base qw (Template::Plugin::Filter);
-use Text::MultiMarkdown;
 
-our $VERSION = 0.03;
+use strict;
+
+use vars qw($text_mmd_class);
+use parent qw (Template::Plugin::Filter);
+use Carp;
+
+BEGIN {
+    $text_mmd_class = 'Text::MultiMarkdown::XS';
+    eval 'require Text::MultiMarkdown::XS';
+    if ($@) {
+	$text_mmd_class = 'Text::MultiMarkdown';
+	eval 'require Text::MultiMarkdown';
+	if ($@) {
+	    croak "cannot load either Text::MultiMarkdown::XS or Text::MultiMarkdown";
+	}
+    }
+}
+    
+
+our $VERSION = 0.04;
 
 sub init {
     my $self = shift;
@@ -15,8 +30,22 @@ sub init {
 
 sub filter {
     my ($self, $text, $args, $config) = @_;
-    my $m = Text::MultiMarkdown->new(%{$config || {}});
-    return $m->markdown($text);
+
+    $config ||= {};
+
+    my $req_class = delete $config->{implementation} || '';
+
+    if ($req_class eq 'PP') {
+	require Text::MultiMarkdown;
+	return Text::MultiMarkdown->new(%$config)->markdown($text);
+    }
+    elsif ($req_class eq 'XS') {
+	require Text::MultiMarkdown::XS;
+	return Text::MultiMarkdown::XS->new($config)->markdown($text);
+    }
+    else {
+	return $text_mmd_class->new(%$config)->markdown($text);
+    }
 }
 
 1;
@@ -38,10 +67,23 @@ Template::Plugin::MultiMarkdown - TT plugin for Text::MultiMarkdown
   **Bold** foo bar baz
   [%- END %]
 
+  [% USE MultiMarkdown -%]
+  [% FILTER multimarkdown( document_format => 'complete' ) %]
+  ...
+  [% END %]
+
+
 =head1 DESCRIPTION
 
-Template::Plugin::MultiMarkdown is a plugin for TT, which will format
-your text with MultiMarkdown Style.
+C<Template::Plugin::MultiMarkdown> wraps C<Text::MultiMarkdown::XS> and
+C<Text::MultiMarkdown> into a Template Toolkit plugin, and will filter your MultiMarkdown
+text into HTML.  By default the plugin will select the XS implementation over the pure
+perl version, but the implementation can be chosen explictly by specifying a parameter
+C<implementation> to the C<multimarkdown> filter.
+
+NOTE: C<Text::MultiMarkdown::XS> is a new module and the interface to that module is still
+liable to change.
+
 
 =head1 SUBROUTINES/METHODS
 
@@ -57,7 +99,7 @@ There are two methods required by the TT plugin API:
 
 =head1 VERSION
 
-This man page describes version 0.03.
+This man page describes version 0.04.
 
 =head1 SEE ALSO
 

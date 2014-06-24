@@ -1,5 +1,4 @@
-#!/usr/bin/perl
-# $Id: 93-kwalitee.t 4103 2009-03-02 20:41:50Z andrew $
+#!/usr/bin/env perl
 
 use Test::More;
 

@@ -1,8 +1,14 @@
+#!/usr/bin/env perl
+
 use strict;
 use Test::More tests => 5;
 use Template;
+use FindBin qw($Bin);
+use lib "$Bin/../lib";
 
 my $tt = Template->new;
+
+##############################################################################
 
 $tt->process(\<<EOF, {}, \my $html1) or die $tt->error;
 [% USE MultiMarkdown -%]
@@ -12,16 +18,22 @@ Foo
 Bar
 [%- END -%]
 EOF
+chomp($html1);
 
-is(<<"EOF", $html1);
+my $html1e = <<EOF;
 <p>Foo</p>
 
 <p>Bar</p>
 EOF
+chomp($html1e);
+
+is($html1, $html1e);
+
+##############################################################################
 
 $tt->process(\<<EOF, {}, \my $html2) or die $tt->error;
 [% USE MultiMarkdown -%]
-[% FILTER multimarkdown(heading_ids = 0) -%]
+[% FILTER multimarkdown(heading_ids = 0, implementation => 'PP') -%]
 #Foo
 
 Bar
@@ -32,7 +44,7 @@ Bar
 [%- END -%]
 EOF
 
-is( <<"EOF", $html2 );
+my $html2e = <<EOF;
 <h1>Foo</h1>
 
 <h2>Bar</h2>
@@ -42,10 +54,16 @@ is( <<"EOF", $html2 );
 <p><strong>Bold</strong></p>
 EOF
 
+chomp($html2);
+chomp($html2e);
+
+is( $html2, $html2e );
+
+##############################################################################
 
 $tt->process(\<<EOF, {}, \my $html3) or die $tt->error;
 [% USE MultiMarkdown -%]
-[% FILTER multimarkdown(heading_ids = 1) -%]
+[% FILTER multimarkdown(heading_ids = 1, implementation = 'PP') -%]
 #Foo
 
 Bar
@@ -68,7 +86,7 @@ EOF
 
 $tt->process(\<<EOF, {}, \my $html4) or die $tt->error;
 [% USE MultiMarkdown -%]
-[% FILTER multimarkdown(heading_ids = 1) -%]
+[% FILTER multimarkdown(heading_ids = 1, implementation = 'PP') -%]
 
 |      | Spanned Column |
 | Col1 | col2  | col3   |
@@ -115,7 +133,7 @@ EOF
 
 $tt->process(\<<EOF, {}, \my $html5) or die $tt->error;
 [% USE MultiMarkdown -%]
-[% FILTER multimarkdown(heading_ids = 1) -%]
+[% FILTER multimarkdown(heading_ids = 1, implementation = 'PP') -%]
 
 This is an image ![An image][img]
 

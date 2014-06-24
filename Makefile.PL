@@ -5,9 +5,8 @@ WriteMakefile(
     PREREQ_PM         => {
         Template            => 2.16,
 	Text::MultiMarkdown => '1.0.1',
-        Text::Markdown      => 0,
     },
     ($] >= 5.005 ?
       (ABSTRACT_FROM  => 'lib/Template/Plugin/MultiMarkdown.pm',
-       AUTHOR         => 'Andrew Ford <A.Ford@ford-mason.co.uk>') : ()),
+       AUTHOR         => 'Andrew Ford <andrew@ford-mason.co.uk>') : ()),
 );

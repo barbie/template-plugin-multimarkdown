@@ -12,3 +12,4 @@ t/93-kwalitee.t
 t/94-distribution.t
 lib/Template/Plugin/MultiMarkdown.pm
 META.yml                                 Module meta-data (added by MakeMaker)
+META.json                                Module JSON meta-data (added by MakeMaker)

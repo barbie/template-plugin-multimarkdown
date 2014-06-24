@@ -1,5 +1,4 @@
-#!/usr/bin/perl
-# $Id: 91-pod-coverage.t 4103 2009-03-02 20:41:50Z andrew $
+#!/usr/bin/env perl
 
 use Test::More;
 eval "use Test::Pod::Coverage";
