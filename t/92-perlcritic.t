@@ -1,13 +1,19 @@
 #!/usr/bin/env perl
-
-use strict;
 use warnings;
+use strict;
+
 use File::Spec;
 use Test::More;
 use English qw(-no_match_vars);
 
-if ( not $ENV{TEST_AUTHOR} ) {
-    my $msg = 'Author test.  Set $ENV{TEST_AUTHOR} to a true value to run.';
+if ( not $ENV{RELEASE_TESTING} ) {
+    my $msg = 'Author test.  Set $ENV{RELEASE_TESTING} to a true value to run.';
+    plan( skip_all => $msg );
+}
+
+my $rcfile = File::Spec->catfile( 't', 'perlcriticrc' );
+unless ( -f $rcfile ) {
+    my $msg = 'Author test.  File $rcfile required for testing.';
     plan( skip_all => $msg );
 }
 
@@ -18,6 +24,5 @@ if ( $EVAL_ERROR ) {
    plan( skip_all => $msg );
 }
 
-my $rcfile = File::Spec->catfile( 't', 'perlcriticrc' );
 Test::Perl::Critic->import( -profile => $rcfile );
 all_critic_ok();
