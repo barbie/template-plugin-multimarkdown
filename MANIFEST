@@ -1,6 +1,9 @@
 Changes
+lib/Template/Plugin/MultiMarkdown.pm
 Makefile.PL
 MANIFEST
+META.yml
+META.json
 README
 TODO
 t/00-basic.t
@@ -10,6 +13,6 @@ t/91-pod-coverage.t
 t/92-perlcritic.t
 t/93-kwalitee.t
 t/94-distribution.t
-lib/Template/Plugin/MultiMarkdown.pm
-META.yml                                 Module meta-data (added by MakeMaker)
-META.json                                Module JSON meta-data (added by MakeMaker)
+t/95-changedate.t
+t/96-metatest.t
+t/97-metatest.t

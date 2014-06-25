@@ -6,6 +6,7 @@ Revision history for Template-Plugin-MultiMarkdown
         - reworked META files.
         - reworked Makefile.PL for clarity.
         - reworked README.
+        - revised and extended test suite.
 
 0.06    2013-06-22
         - Added dependency on parent
