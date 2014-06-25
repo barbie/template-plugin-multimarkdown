@@ -30,9 +30,9 @@ build_requires:
   Test::More:               0.70
 
 provides:
-  Template::Plugin::Digest::SHA1:
-    file:     lib/Template/Plugin/Digest/SHA1.pm
-    version:  0.04
+  Template::Plugin::MultiMarkdown:
+    file:     lib/Template/Plugin/MultiMarkdown.pm
+    version:  0.06
 no_index:
   directory:
     - t

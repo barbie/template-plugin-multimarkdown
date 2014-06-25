@@ -42,5 +42,12 @@
                 "Text::MultiMarkdown" : "v1.0.1"
             }
         }
+    },
+
+    "provides": {
+        "Template::Plugin::MultiMarkdown": {
+            "file": "lib/Template/Plugin/MultiMarkdown.pm",
+            "version": "0.06"
+        }
     }
 }
