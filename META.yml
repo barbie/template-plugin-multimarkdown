@@ -40,8 +40,8 @@ no_index:
 
 resources:
   license:    http://www.perlfoundation.org/artistic_license_2_0
-  bugtracker: http://rt.cpan.org/Public/Dist/Display.html?Name=Template-Plugin-Digest-SHA1
-  repository: http://github.com/barbie/template-plugin-digest-sha1
+  bugtracker: http://rt.cpan.org/Public/Dist/Display.html?Name=Template-Plugin-MultiMarkdown
+  repository: http://github.com/barbie/template-plugin-multimarkdown
 
 meta-spec:
    version:   1.4

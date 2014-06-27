@@ -50,4 +50,14 @@
             "version": "0.06"
         }
     }
+
+    "resources": {
+        "license": "http://www.perlfoundation.org/artistic_license_2_0",
+        "bugtracker": { "web": "http://rt.cpan.org/Public/Dist/Display.html?Name=Template-Plugin-MultiMarkdown" },
+        "repository": {
+            "url": "git://github.com/barbie/template-plugin-multimarkdown.git",
+            "web": "http://github.com/barbie/template-plugin-multimarkdown",
+            "type": "git"
+        }
+    }
 }
