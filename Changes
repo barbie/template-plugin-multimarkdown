@@ -1,12 +1,14 @@
 Revision history for Template-Plugin-MultiMarkdown
 ==================================================
 
+0.07    2013-06-29
         - new maintainer: BARBIE.
         - change file dates changed to meet W3CDTF standards.
         - reworked META files.
         - reworked Makefile.PL for clarity.
         - reworked README.
         - revised and extended test suite.
+        - added git repository links to metadata.
 
 0.06    2013-06-22
         - Added dependency on parent
