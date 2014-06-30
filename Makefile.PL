@@ -17,7 +17,7 @@ WriteMakefile(
         # prereqs
         'parent'                    => '0',
         'Template'                  => '2.16',
-        'Template::Plugin::Filter'  => '2.16',
+        'Template::Plugin::Filter'  => '1.38',
 	    'Text::MultiMarkdown'       => '1.0.1',
 
         # for testing
