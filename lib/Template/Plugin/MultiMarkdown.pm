@@ -3,7 +3,7 @@ package Template::Plugin::MultiMarkdown;
 use warnings;
 use strict;
 
-our $VERSION = 0.07;
+our $VERSION = 0.08;
 
 use vars qw($text_mmd_class);
 use parent qw (Template::Plugin::Filter);
