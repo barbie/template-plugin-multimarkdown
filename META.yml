@@ -19,7 +19,7 @@ requires:
   parent:                   0
   Template:                 2.16
   Template::Plugin::Filter: 1.38
-  Text::MultiMarkdown:      v1.0.1
+  Text::MultiMarkdown:      1.000035
 recommends:
   Test::CPAN::Meta:         0
   Test::CPAN::Meta::JSON:   0

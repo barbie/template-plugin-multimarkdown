@@ -1,6 +1,9 @@
 Revision history for Template-Plugin-MultiMarkdown
 ==================================================
 
+        - require a more stable, and heavily bugfixed version of
+          Text::MultiMarkdown. This also includes all the newer features.
+
 0.08    2013-06-30
         - fixed prerequisite versions.
 

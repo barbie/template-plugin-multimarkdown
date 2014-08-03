@@ -18,7 +18,7 @@ WriteMakefile(
         'parent'                    => '0',
         'Template'                  => '2.16',
         'Template::Plugin::Filter'  => '1.38',
-	    'Text::MultiMarkdown'       => '1.0.1',
+	    'Text::MultiMarkdown'       => '1.000035',
 
         # for testing
         'IO::File'                  => 0,
