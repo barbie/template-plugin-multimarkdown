@@ -43,6 +43,7 @@
         },
         "test" : {
             "requires": {
+                "FindBin": "0",
                 "IO::File": "0",
                 "Test::More": "0.70"
             },

@@ -4,6 +4,7 @@ Revision history for Template-Plugin-MultiMarkdown
         - require a more stable, and heavily bugfixed version of
           Text::MultiMarkdown. This also includes all the newer features.
         - inserted missing test->requires/recommends section in META.json.
+        - added missing FindBin prerequisite.
 
 0.08    2014-06-30
         - fixed prerequisite versions.

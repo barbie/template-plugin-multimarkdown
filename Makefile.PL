@@ -21,6 +21,7 @@ WriteMakefile(
 	    'Text::MultiMarkdown'       => '1.000035',
 
         # for testing
+        'FindBin'                   => 0,
         'IO::File'                  => 0,
         'Test::More'                => 0.70
 
