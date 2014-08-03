@@ -40,6 +40,18 @@
                 "Template::Plugin::Filter" : "1.38",
                 "Text::MultiMarkdown" : "1.000035"
             }
+        },
+        "test" : {
+            "requires": {
+                "IO::File": "0",
+                "Test::More": "0.70"
+            },
+            "recommends": {
+                "Test::CPAN::Meta": "0",
+                "Test::CPAN::Meta::JSON": "0",
+                "Test::Pod": "1.00",
+                "Test::Pod::Coverage": "0.08"
+            }
         }
     },
 

@@ -3,11 +3,12 @@ Revision history for Template-Plugin-MultiMarkdown
 
         - require a more stable, and heavily bugfixed version of
           Text::MultiMarkdown. This also includes all the newer features.
+        - inserted missing test->requires/recommends section in META.json.
 
-0.08    2013-06-30
+0.08    2014-06-30
         - fixed prerequisite versions.
 
-0.07    2013-06-29
+0.07    2014-06-29
         - new maintainer: BARBIE.
         - change file dates changed to meet W3CDTF standards.
         - reworked META files.
