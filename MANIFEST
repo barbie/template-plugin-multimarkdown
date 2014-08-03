@@ -16,3 +16,4 @@ t/94-distribution.t
 t/95-changedate.t
 t/96-metatest.t
 t/97-metatest.t
+t/perlcriticrc
