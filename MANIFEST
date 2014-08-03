@@ -10,10 +10,6 @@ t/00-basic.t
 t/01-multimarkdown.t
 t/90-pod.t
 t/91-pod-coverage.t
-t/92-perlcritic.t
-t/93-kwalitee.t
-t/94-distribution.t
 t/95-changedate.t
 t/96-metatest.t
 t/97-metatest.t
-t/perlcriticrc
