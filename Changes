@@ -2,6 +2,7 @@ Revision history for Template-Plugin-MultiMarkdown
 ==================================================
 
         - added runtime recommends prerequisite.
+        - added LICENSE file.
 
 0.09    2014-08-09
         - require a more stable, and heavily bugfixed version of
