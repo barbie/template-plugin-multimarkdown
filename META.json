@@ -1,7 +1,7 @@
 {
     "name" : "Template-Plugin-MultiMarkdown",
     "abstract" : "TT plugin for Text::MultiMarkdown",
-    "version" : "0.09",
+    "version" : "0.10",
     "author" : [
         "Barbie (BARBIE) <barbie@cpan.org>"
     ],
@@ -62,7 +62,7 @@
     "provides": {
         "Template::Plugin::MultiMarkdown": {
             "file": "lib/Template/Plugin/MultiMarkdown.pm",
-            "version": "0.09"
+            "version": "0.10"
         }
     },
 
