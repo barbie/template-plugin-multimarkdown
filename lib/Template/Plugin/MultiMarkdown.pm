@@ -122,7 +122,7 @@ charities:
 =head1 AUTHOR
 
   Original Author:    Andrew Ford               2006-2014
-  Current Maintainer: Barbie <barbie@cpan.org>  2014
+  Current Maintainer: Barbie <barbie@cpan.org>  2014-2015
 
 =head1 ACKNOWLEDGEMENTS
 
@@ -132,7 +132,7 @@ by Naoya Ito E<lt>naoya@bloghackers.netE<gt>.
 =head1 COPYRIGHT & LICENSE
 
 Copyright (C) 2008-2014 Andrew Ford
-Copyright (C) 2014      Barbie for Miss Barbell Productions.
+Copyright (C) 2014-2015 Barbie for Miss Barbell Productions.
 
 This distribution is free software; you can redistribute it and/or
 modify it under the Artistic Licence v2.
