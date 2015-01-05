@@ -1,6 +1,7 @@
 Revision history for Template-Plugin-MultiMarkdown
 ==================================================
 
+0.11    2015-01-05
         - fixed license fields in META.json to be lists.
 
 0.10    2014-08-15
