@@ -1,6 +1,7 @@
 Revision history for Template-Plugin-MultiMarkdown
 ==================================================
 
+0.12    2015-04-04
         - removed duplicate key 'build_requires' from META.
 
 0.11    2015-01-05

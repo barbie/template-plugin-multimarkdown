@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:                     Template-Plugin-MultiMarkdown
-version:                  0.11
+version:                  0.12
 abstract:                 TT plugin for Text::MultiMarkdown
 author:
   - Barbie <barbie@cpan.org>
@@ -33,7 +33,7 @@ recommends:
 provides:
   Template::Plugin::MultiMarkdown:
     file:     lib/Template/Plugin/MultiMarkdown.pm
-    version:  0.11
+    version:  0.12
 no_index:
   directory:
     - t
