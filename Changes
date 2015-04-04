@@ -1,6 +1,8 @@
 Revision history for Template-Plugin-MultiMarkdown
 ==================================================
 
+        - removed duplicate key 'build_requires' from META.
+
 0.11    2015-01-05
         - fixed license fields in META.json to be lists.
 
